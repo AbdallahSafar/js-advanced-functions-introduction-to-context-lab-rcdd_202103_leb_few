@@ -49,6 +49,5 @@ function allWagesFor(rec) {
 }
 
 function findEmployeeByFirstName(records,fname) {
-    const filtered = records.filter(rec => rec.firstName === fname);
-    return (filtered.length === 0) ? undefined : filtered;
+    return records.find(rec => rec.firstName === fname);
 }
