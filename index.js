@@ -51,3 +51,7 @@ function allWagesFor(rec) {
 function findEmployeeByFirstName(records,fname) {
     return records.find(rec => rec.firstName === fname);
 }
+
+function calculatePayroll(records) {
+  return records.reduce((total,current) => total + allWagesFor(current),0);
+}
