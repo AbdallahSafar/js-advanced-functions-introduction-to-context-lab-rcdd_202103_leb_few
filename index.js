@@ -12,6 +12,6 @@ function createEmployeeRecord(arr) {
 
 function createEmployeeRecords(arr) {
   return arr.map(el => {
-    return createEmployeeRecord(el)
+    return createEmployeeRecord(el);
   })
 }
