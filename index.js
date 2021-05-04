@@ -52,5 +52,3 @@ function findEmployeeByFirstName(records,fname) {
     const filtered = records.filter(rec => rec.firstName === fname);
     return (filtered.length === 0) ? undefined : filtered;
 }
-
-
