@@ -43,3 +43,7 @@ function hoursWorkedOnDate(rec,date) {
 function wagesEarnedOnDate(rec,date) {
   return hoursWorkedOnDate(rec,date) * rec.payPerHour;
 }
+
+function allWagesFor(rec) {
+  return rec.timeInEvents.reduce((total,current) => total + wagesEarnedOnDate(rec,current.date),0);
+}
