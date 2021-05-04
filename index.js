@@ -39,3 +39,7 @@ function hoursWorkedOnDate(rec,date) {
     let timeOut = parseInt(rec.timeOutEvents.find(el => el.date === date).hour);
     return (timeOut - timeIn) / 100;
 }
+
+function wagesEarnedOnDate(rec,date) {
+  return hoursWorkedOnDate(rec,date) * rec.payPerHour;
+}
