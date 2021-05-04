@@ -47,3 +47,10 @@ function wagesEarnedOnDate(rec,date) {
 function allWagesFor(rec) {
   return rec.timeInEvents.reduce((total,current) => total + wagesEarnedOnDate(rec,current.date),0);
 }
+
+function findEmployeeByFirstName(records,fname) {
+    const filtered = records.filter(rec => rec.firstName === fname);
+    return (filtered.length === 0) ? undefined : filtered;
+}
+
+
