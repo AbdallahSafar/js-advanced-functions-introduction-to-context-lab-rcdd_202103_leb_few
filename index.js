@@ -24,3 +24,12 @@ function createTimeInEvent(emp,date) {
   });
   return emp;
 }
+
+function createTimeOutEvent(emp,date) {
+  emp.timeOutEvents.push({
+    type: "TimeOut",
+    hour: date.split(' ')[1],
+    date: date.split(' ')[0]
+  });
+  return emp;
+}
